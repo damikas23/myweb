@@ -17,7 +17,7 @@
         <div class="card">
             <h2>Registration</h2>
 
-            <form action="#">
+            <form action="https://api.web3forms.com/submit" >
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
@@ -45,11 +45,10 @@
         name=document.getElementById("name").value; 
         email=document.getElementById("email").value; 
         password=document.getElementById("password").value;
-       
-        //localStorage.setItem("name", name);
-        //localStorage.setItem("email", email);
-        //localStorage.setItem("password", password);
 
+        var lowerCaseLetters = /[a-z]/g;
+        var upperCaseLetters = /[A-Z]/g;
+        var numbers = /[0-9]/g;
 
         let user_records=new Array();
         user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
@@ -57,6 +56,15 @@
             return v.email==email
         })){
             alert("Email or username has already been used.Try a different one");
+        } else if(name.length > 8) {
+            alert('Username is too long');
+            alert('Must be at least 10 characters long');
+        } else if(password.length > 8) {
+            alert('Max of 8');
+        } else if(!password.match(numbers)) {
+            alert('please add 1 number');
+        } else if(!password.match(upperCaseLetters)) {
+            alert('please add 1 uppercase letter');
         }
         else{
             user_records.push({

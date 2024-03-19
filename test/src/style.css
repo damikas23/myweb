@@ -247,3 +247,9 @@ body.dark {
   left: calc(165% - 40px - 20px);
 }
 /*#4070f4*/
+
+@media all and (max-width: 500px) {
+  .wspan{
+    display: none;
+  }
+}

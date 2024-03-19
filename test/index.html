@@ -16,12 +16,19 @@
 <body>
   <div class="navbar">
     <a href="../auth/mindex.html">
-      <i class="fa-solid fa-arrow-left-long fa-2xl" style="background: green; padding: 10px; height: 50px; text-align: center; line-height: 0.9; border-radius: 100px;"></i>
+      <h1 class="array_h1" style="background-color: green;border-radius: 50px;padding-top: 5px;padding-bottom: 5px;padding-right: 10px;padding-left: 10px;">
+        <script>
+          document.write(localStorage.getItem("name")[0]);
+        </script>
+      </h1>
     </a>
-    <br>
-      <div class="toggle"></div>
     <a href="index.html">
-      <h2>Store</h2>
+      <h2>
+        Welcome to the Store<span class="wspan">
+        <script>
+          document.write(localStorage.getItem("name"));
+        </script></span>
+      </h2>
     </a>
 
     <a href="cart.html">
@@ -38,8 +45,15 @@
 
   </div>
 
+
+
+  <div id="label" class="text-center"></div>
+
+  <div class="shopping-cart" id="shopping-cart"></div>
+
 </body>
 <script src="src/Data.js"></script>
 <script src="src/main.js"></script>
+<script src="src/cart.js"></script>
 
 </html>

@@ -27,11 +27,4 @@ let shopItemsData = [
       desc: "A chance to get a free dnuclear.Una oportunidad de obtener un dnuclear gratis",
       img: "images/img-1.jpg",
     },
-    {
-      id: "Donotdisturb",
-      name: "Do not disturb",
-      price: 100,
-      desc: "A chance to get a free dnuclear.Una oportunidad de obtener un dnuclear gratis",
-      img: "images/do.png",
-    },
   ];

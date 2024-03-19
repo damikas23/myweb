@@ -60,6 +60,7 @@ body {
 }
 body.dark {
   background-color: #18191a;
+  color: white;
 }
 .toggle {
   position: relative;
